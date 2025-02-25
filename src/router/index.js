@@ -2,7 +2,8 @@ import { createRouter, createWebHistory } from 'vue-router';
 import { useAuthStore } from '../stores/auth';  // 引入 Pinia store
 import Login from '../components/Login.vue';
 import Register from '../components/Register.vue';
-import Home from '../components/Dashboard.vue';
+import Home from '../components/SideBar.vue';
+import DashBoard from "@/components/SideBar.vue";
 
 const routes = [
   {
@@ -19,8 +20,8 @@ const routes = [
   },
   {
     path: '/Dashboard',
-    component: Home,
-    meta: { requiresAuth: true },  // 需要登录权限才能访问
+    component: DashBoard,
+    meta: { requiresAuth: false },  // 需要登录权限才能访问
   },
 ];
 
